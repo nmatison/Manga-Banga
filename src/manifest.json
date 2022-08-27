@@ -121,7 +121,8 @@
 		"*://*.mangasail.net/*",
 		"*://*.mangasaki.com/*",
 		"*://*.manhuaplus.com/*",
-		"*://*.mangakomicdn.com/*"
+		"*://*.mangakomicdn.com/*",
+		"*://*.coloredmanga.com/*"
    ],
 	"content_scripts": [
     {
@@ -195,7 +196,8 @@
 				"*://kissaway.net/*",
 				"*://klmanga.com/*",
 				"*://lovehug.net/*",
-				"*://www.mangasaki.com/*"
+				"*://www.mangasaki.com/*",
+				"*://*.coloredmanga.com/*"
 			],
 	  "js": ["External/pdf-lib.js",
 			"External/jszip.js",
@@ -228,6 +230,7 @@
 			"Scripts/funmanga.js",
 			"Scripts/mangafast.js",
 			"Scripts/lovehug.js",
+			"Scripts/coloredmanga.js",
 			"index.js"
 		],
 		"css": ["Styles/md-style.css"]

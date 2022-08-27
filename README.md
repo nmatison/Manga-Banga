@@ -1,5 +1,7 @@
 # IMPORTANT NOTE
--New websites will not be add for now. The SOURCE CODE is available, you can add the websites you want.  
+I have forked this from the original: https://github.com/AllaliAdil/Manga-Downloader-Extension
+
+I have updated code so that it will at least work on some sites. I have also added in coloredmanga.com. I will continue to make updates to this on my end as it seems like a fun side project.
 
 # Manga-Downloader-Extension
 Chrome/Firefox extension to download Manga/Manhua/Manhwa/Webtoons/Comics chapters as PDF/ZIP(images) from many websites.  

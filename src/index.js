@@ -2,7 +2,7 @@ var host = window.location.host;
 
 if(document.querySelector("span#azerty") === null){
     // to make code run only once 
-    if(host !== "www.qiman6.com" && host !== "qingman5.com" && host !== "www.mangapanda.com"){
+    if(host !== "qiman6.com" && host !== "qingman5.com" && host !== "mangapanda.com"){
         var mark = document.createElement("span");
         mark.id = "azerty";
         mark.style.display = "none";
@@ -16,10 +16,10 @@ if(document.querySelector("span#azerty") === null){
     }
     
     switch (host) {
-        case "www.mangareader.net":
+        case "mangareader.net":
             mangareaderF();
             break;
-        case "www.mangapanda.com":
+        case "mangapanda.com":
             mangapandaF();
             break;
         case "mangakiss.org":
@@ -119,18 +119,18 @@ if(document.querySelector("span#azerty") === null){
         case "manga4life.com":
             mangasee123F();         // manga4life.com is the same as mangasee123.com
             break;
-        case "www.webtoons.com":
+        case "webtoons.com":
             webtoonsF();
             break;
-        case "www.mangasail.co":
-        case "www.mangatail.me":
-        case "www.mangasaki.com":
+        case "mangasail.co":
+        case "mangatail.me":
+        case "mangasaki.com":
             mangasailF();
             break;
         case "readmanhwa.com":
             readmanhwaF();
             break;
-        case "www.mangatown.com":
+        case "mangatown.com":
             mangatownF();
             break;
         case "loveheaven.net":  // changed to lovehug.net
@@ -138,7 +138,7 @@ if(document.querySelector("span#azerty") === null){
         case "klmanga.com":
             loveheavenF();
             break;
-        case "www.qiman6.com":
+        case "qiman6.com":
             qiman6F();
             break;
         case "qingman5.com":
@@ -147,9 +147,9 @@ if(document.querySelector("span#azerty") === null){
         case "full-metal-alchemist.com":
             full_metal_alchemistF();
             break;
-        case "www.funmanga.com":
-        case "www.mngdoom.com":
-        case "www.mangainn.net":
+        case "funmanga.com":
+        case "mngdoom.com":
+        case "mangainn.net":
             funmangaF();
             break;
         case "mangafast.net":
@@ -158,6 +158,9 @@ if(document.querySelector("span#azerty") === null){
             break;
         case "lovehug.net":
             lovehugF();
+            break;
+        case "coloredmanga.com":
+            coloredManga();
             break;
         default:
             // alert("This should not happen");
