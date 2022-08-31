@@ -41,7 +41,20 @@ function coloredManga() {
         // i for rows and index is for arrays
         // i start from 1 because 0 is for header
         let index = 0;
+        // Do a first pass through to filter out any sort of Section Groupings such as chapters being listed under a volume.
+        const skipRow = new Set();
         for (let i = 1; i < rows.length; i++) {
+            if (rows[i].querySelector("li") !== null) {
+                skipRow.add(i);
+            }
+        }
+
+        const chapterCount = rows.length - 1 - skipRow.size;
+        
+        for (let i = 1; i < rows.length; i++) {
+            if (skipRow.has(i)) {
+                continue;
+            }
             let pdfButton = document.createElement("button");
             let zipButton = document.createElement("button");
             pdfButton.textContent = "pdf";
@@ -68,7 +81,7 @@ function coloredManga() {
             let xhttp = new XMLHttpRequest();
             // added id to each xhttp request to know what button called it					
             xhttp.id = index;
-            xhttp.chapterCount = rows.length-1;
+            xhttp.chapterCount = chapterCount;
             xhttp.onreadystatechange = function () {
                 let waitNote = document.querySelector("span#md-batch-note");
                 let id = this.id;
@@ -107,9 +120,6 @@ function coloredManga() {
                     };
                     // check if all buttons are add
                     let len = chaptersData.reduce((acc,cv)=>(cv)?acc+1:acc,0);
-                    console.log("count")
-                    console.log(len)
-                    console.log(chapterCount)
                     waitNote.textContent = "wait, "+len+"/"+chapterCount+" Chapters.";
                     if(len === chapterCount){
                         addChaptersToList();
