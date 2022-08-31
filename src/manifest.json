@@ -1,8 +1,8 @@
 {
 	"manifest_version": 2,
-	"name": "Manga Downloader",
-	"short_name" : "Manga Downloader",
-	"version": "3.10.15",
+	"name": "Manga Banga",
+	"short_name" : "Manga Banga",
+	"version": "0.0.2",
 	
 	"description": "Download Manga/Manhua/Manhwa/Webtoons/Comics chapters as PDF/ZIP(images) from many websites.",
 
